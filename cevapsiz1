@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprachbausteine B2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #364b89; /* Ayda mavi */
+            color: white;
+        }
+
+        .container {
+            width: 210mm;
+            min-height: 297mm;
+            background: white;
+            padding: 20mm;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: black;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: #364b89;
+            padding: 20px 0;
+        }
+
+        header .ayda-logo {
+            height: 80px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .test-section {
+            margin-bottom: 20px;
+            font-size: 14px; /* Metin boyutu küçültüldü */
+        }
+
+        .bold-button {
+            font-weight: bold;
+            cursor: pointer;
+            color: #364b89;
+            background-color: white;
+            border: 1px solid #364b89;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+
+        .options {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .options label {
+            cursor: pointer;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .telc-logo {
+            display: block;
+            margin: 10px auto;
+            height: 40px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 16px;
+            color: red;
+        }
+
+        .correct {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://www.aydadil.com/wp-content/uploads/2024/03/aydankdilwhite-1.png" alt="Ayda Logo" class="ayda-logo">
+        </header>
+        <img src="https://www.ilm.com.tr/Management/UploadFiles/Editor_Files/Telc_Masterlogo_rot_rundeecke.png" alt="Telc Logo" class="telc-logo">
+        <h1>Sprachbausteine B2</h1>
+        <div class="test-section">
+            <p>Sehr geehrte Frau Szabo,</p>
+            <p>Vielen Dank für Ihr Interesse <button class="bold-button" onclick="showOptions('q21')">[21]</button> unseren Deutschkursen. Anbei erhalten Sie das angeforderte Anmeldeformular, das Sie bitte ausgefüllt an uns zurückschicken.</p>
+            <div class="options" id="options-q21">
+                <label><input type="radio" name="q21" value="an" onclick="selectOption('q21', 'an')"> A) an</label>
+                <label><input type="radio" name="q21" value="bei" onclick="selectOption('q21', 'bei')"> B) bei</label>
+                <label><input type="radio" name="q21" value="in" onclick="selectOption('q21', 'in')"> C) in</label>
+            </div>
+
+            <p>Mit der Anmeldung überweisen Sie bitte eine Anzahlung <button class="bold-button" onclick="showOptions('q22')">[22]</button> von € 200,- auf unser Konto. Die Kontoverbindung finden Sie unten auf dem Anmeldeformular.</p>
+            <div class="options" id="options-q22">
+                <label><input type="radio" name="q22" value="in Betrag" onclick="selectOption('q22', 'in Betrag')"> A) in Betrag</label>
+                <label><input type="radio" name="q22" value="in Höhe" onclick="selectOption('q22', 'in Höhe')"> B) in Höhe</label>
+                <label><input type="radio" name="q22" value="in Summe" onclick="selectOption('q22', 'in Summe')"> C) in Summe</label>
+            </div>
+
+            <p><button class="bold-button" onclick="showOptions('q23')">[23]</button> besserer Einschätzung Ihrer Vorkenntnisse haben wir einen Einstufungstest beigelegt. Wenn Sie die Tests Bögen ausfüllen und mit der Anmeldung an uns zurücksenden, helfen Sie uns bei der Kursplanung. Ein mündlicher Test wird sich am ersten Unterrichtstag in unserer Schule <button class="bold-button" onclick="showOptions('q24')">[24]</button>. Damit sind wir in der Lage, den für Sie angemessenen Kurs auszuwählen.</p>
+            <div class="options" id="options-q23">
+                <label><input type="radio" name="q23" value="für" onclick="selectOption('q23', 'für')"> A) für</label>
+                <label><input type="radio" name="q23" value="zur" onclick="selectOption('q23', 'zur')"> B) zur</label>
+                <label><input type="radio" name="q23" value="Zwecks" onclick="selectOption('q23', 'Zwecks')"> C) Zwecks</label>
+            </div>
+            <div class="options" id="options-q24">
+                <label><input type="radio" name="q24" value="angeschlossen" onclick="selectOption('q24', 'angeschlossen')"> A) angeschlossen</label>
+                <label><input type="radio" name="q24" value="anschließen" onclick="selectOption('q24', 'anschließen')"> B) anschließen</label>
+                <label><input type="radio" name="q24" value="anschließen an" onclick="selectOption('q24', 'anschließen an')"> C) anschließen an</label>
+            </div>
+
+            <p>Außerdem finden Sie in den Unterlagen einen Fragebogen <button class="bold-button" onclick="showOptions('q25')">[25]</button> Ihrer Freizeitinteressen. Wir werden uns bemühen, Ihnen den Aufenthalt in Leipzig so angenehm <button class="bold-button" onclick="showOptions('q26')">[26]</button> wie möglich zu gestalten.</p>
+            <div class="options" id="options-q25">
+                <label><input type="radio" name="q25" value="anlässlich" onclick="selectOption('q25', 'anlässlich')"> A) anlässlich</label>
+                <label><input type="radio" name="q25" value="bezüglich" onclick="selectOption('q25', 'bezüglich')"> B) bezüglich</label>
+                <label><input type="radio" name="q25" value="mittels" onclick="selectOption('q25', 'mittels')"> C) mittels</label>
+            </div>
+            <div class="options" id="options-q26">
+                <label><input type="radio" name="q26" value="als" onclick="selectOption('q26', 'als')"> A) als</label>
+                <label><input type="radio" name="q26" value="wenn" onclick="selectOption('q26', 'wenn')"> B) wenn</label>
+                <label><input type="radio" name="q26" value="wie" onclick="selectOption('q26', 'wie')"> C) wie</label>
+            </div>
+
+            <p>Schließlich bitten wir Sie, bitte die für Sie passende Unterkunftsart auszuwählen. Sie können wählen zwischen einem 3-Sterne-Hotel, <button class="bold-button" onclick="showOptions('q27')">[27]</button> Privatunterkunft in einer deutschen Gastfamilie oder der Unterkunft in einem Studentenwohnheim.</p>
+            <div class="options" id="options-q27">
+                <label><input type="radio" name="q27" value="ein" onclick="selectOption('q27', 'ein')"> A) ein</label>
+                <label><input type="radio" name="q27" value="einem" onclick="selectOption('q27', 'einem')"> B) einem</label>
+                <label><input type="radio" name="q27" value="einer" onclick="selectOption('q27', 'einer')"> C) einer</label>
+            </div>
+
+            <p><button class="bold-button" onclick="showOptions('q28')">[28]</button> Ihre Anmeldung bei uns eingegangen ist, erhalten Sie eine Anmeldebestätigung und einen Stadtplan mit Wegbeschreibung, <button class="bold-button" onclick="showOptions('q29')">[29]</button> Sie den Weg zu uns ohne Umstände finden. Die Adresse Ihrer Unterkunft erhalten Sie ca. 2 Wochen vor Kursbeginn.</p>
+            <div class="options" id="options-q28">
+                <label><input type="radio" name="q28" value="Sobald" onclick="selectOption('q28', 'Sobald')"> A) Sobald</label>
+                <label><input type="radio" name="q28" value="Sofort" onclick="selectOption('q28', 'Sofort')"> B) Sofort</label>
+                <label><input type="radio" name="q28" value="Sooft" onclick="selectOption('q28', 'Sooft')"> C) Sooft</label>
+            </div>
+            <div class="options" id="options-q29">
+                <label><input type="radio" name="q29" value="dafür" onclick="selectOption('q29', 'dafür')"> A) dafür</label>
+                <label><input type="radio" name="q29" value="damit" onclick="selectOption('q29', 'damit')"> B) damit</label>
+                <label><input type="radio" name="q29" value="dazu" onclick="selectOption('q29', 'dazu')"> C) dazu</label>
+            </div>
+
+            <p><button class="bold-button" onclick="showOptions('q30')">[30]</button> weitere Fragen steht Ihnen unser Sekretariat gerne montags bis freitags von 8 bis 18 Uhr zur Verfügung.</p>
+            <div class="options" id="options-q30">
+                <label><input type="radio" name="q30" value="bei" onclick="selectOption('q30', 'bei')"> A) bei</label>
+                <label><input type="radio" name="q30" value="Für" onclick="selectOption('q30', 'Für')"> B) Für</label>
+                <label><input type="radio" name="q30" value="Zu" onclick="selectOption('q30', 'Zu')"> C) Zu</label>
+            </div>
+        </div>
+
+        <!-- Çöz butonu ve sonuç alanı -->
+        <button onclick="checkAnswers()">Çöz</button>
+        <div class="result" id="result"></div>
+
+        <footer>
+            © 2024 Ayda Language Academy - Alle Rechte vorbehalten
+        </footer>
+    </div>
+
+    <script>
+        const answers = {
+            q21: { answer: "an", explanation: "an, belirli bir şeye yönelik ilgiyi belirtir." },
+            q22: { answer: "in Höhe", explanation: "in Höhe, belirli bir miktarı ifade eder." },
+            q23: { answer: "Zwecks", explanation: "Zwecks, bir amaç belirtirken kullanılır." },
+            q24: { answer: "anschließen", explanation: "anschließen, 'katılmak' anlamında uygun fiildir." },
+            q25: { answer: "bezüglich", explanation: "bezüglich, 'ilgili olarak' anlamında kullanılır." },
+            q26: { answer: "wie", explanation: "wie, 'gibi' anlamında karşılaştırma için kullanılır." },
+            q27: { answer: "einer", explanation: "einer, dişi isim için uygun artikeldir." },
+            q28: { answer: "Sobald", explanation: "Sobald, 'olur olmaz' anlamında zaman ifadesi verir." },
+            q29: { answer: "damit", explanation: "damit, amaç belirten bağlaçtır." },
+            q30: { answer: "Für", explanation: "Für, bir amaç veya kişi için anlamındadır." }
+        };
+
+        function showOptions(questionId) {
+            // Tüm seçenekleri gizle
+            const allOptions = document.querySelectorAll('.options');
+            allOptions.forEach(option => {
+                option.style.display = 'none';
+            });
+
+            // Seçilen sorunun seçeneklerini göster
+            const options = document.getElementById(`options-${questionId}`);
+            if (options) {
+                options.style.display = 'block';
+            }
+        }
+
+        function selectOption(questionId, value) {
+            // Seçenek seçildiğinde butonun metnini güncelle
+            const button = document.querySelector(`button[onclick="showOptions('${questionId}')"]`);
+            if (button) {
+                button.innerText = value;
+                button.dataset.value = value; // Seçili cevabı kaydet
+            }
+
+            // Seçenekleri tekrar gizle
+            const options = document.getElementById(`options-${questionId}`);
+            if (options) {
+                options.style.display = 'none';
+            }
+        }
+
+        function checkAnswers() {
+            let resultText = "";
+            let correctCount = 0;
+
+            for (let key in answers) {
+                const button = document.querySelector(`button[onclick="showOptions('${key}')"]`);
+                if (button) {
+                    const selectedValue = button.dataset.value;
+                    if (selectedValue === answers[key].answer) {
+                        correctCount++;
+                        resultText += `Soru ${key.slice(1)}: Doğru <br>`;
+                    } else {
+                        resultText += `Soru ${key.slice(1)}: Yanlış (Doğru cevap: ${answers[key].answer}, Açıklama: ${answers[key].explanation})<br>`;
+                    }
+                } else {
+                    resultText += `Soru ${key.slice(1)}: Yanıtlanmamış<br>`;
+                }
+            }
+
+            resultText += `<br>Doğru sayısı: ${correctCount} / ${Object.keys(answers).length}`;
+            document.getElementById("result").innerHTML = resultText;
+        }
+    </script>
+</body>
+</html>
