@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprachbausteine B2 - Übung 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #364b89; /* Ayda mavi */
+            color: white;
+        }
+
+        .container {
+            width: 210mm;
+            min-height: 297mm;
+            background: white;
+            padding: 20mm;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: black;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: #364b89;
+            padding: 20px 0;
+        }
+
+        header .ayda-logo {
+            height: 80px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .test-section {
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .bold-button {
+            font-weight: bold;
+            cursor: pointer;
+            color: #364b89;
+            background-color: white;
+            border: 1px solid #364b89;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 4px;
+        }
+
+        .options {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .options label {
+            cursor: pointer;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .telc-logo {
+            display: block;
+            margin: 10px auto;
+            height: 40px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 16px;
+            color: red;
+        }
+
+        .correct {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://www.aydadil.com/wp-content/uploads/2024/03/aydankdilwhite-1.png" alt="Ayda Logo" class="ayda-logo">
+        </header>
+        <img src="https://www.ilm.com.tr/Management/UploadFiles/Editor_Files/Telc_Masterlogo_rot_rundeecke.png" alt="Telc Logo" class="telc-logo">
+        <h1>Sprachbausteine B2 - Übung 2</h1>
+        <div class="test-section">
+            <p>Lieber Igor,</p>
+            <p>vielen Dank für deine Nachricht, <button class="bold-button" onclick="showOptions('q21')">[21]</button> die ich mich sehr gefreut habe. Es ist echt eine tolle Idee im Sommer gemeinsam zu verreisen! Aber möchtest du wirklich mit dem Auto fahren? Ich würde lieber die Bahn nehmen, denn das ist umweltfreundlicher und <button class="bold-button" onclick="showOptions('q22')">[22]</button> nicht billiger? Momentan bin ich nämlich mal wieder etwas knapp bei Kasse.</p>
+
+            <div class="options" id="options-q21">
+                <label><input type="radio" name="q21" value="mit" onclick="selectOption('q21', 'mit')"> A) mit</label>
+                <label><input type="radio" name="q21" value="über" onclick="selectOption('q21', 'über')"> B) über</label>
+                <label><input type="radio" name="q21" value="wegen" onclick="selectOption('q21', 'wegen')"> C) wegen</label>
+            </div>
+
+            <div class="options" id="options-q22">
+                <label><input type="radio" name="q22" value="außerdem" onclick="selectOption('q22', 'außerdem')"> A) außerdem</label>
+                <label><input type="radio" name="q22" value="sonst" onclick="selectOption('q22', 'sonst')"> B) sonst</label>
+                <label><input type="radio" name="q22" value="weiterhin" onclick="selectOption('q22', 'weiterhin')"> C) weiterhin</label>
+            </div>
+
+            <p>Wir könnten doch eine Interrail-Tour machen. Mit einem Global Pass können wir in 30 Europäischen Ländern Zug <button class="bold-button" onclick="showOptions('q23')">[23]</button> und zwar wann und wohin auch immer – allerdings nicht bei uns in Deutschland. Hier müssen wir extra zahlen. Aber wir haben es ja vor uns nicht allzu weit bis zur Grenze. <button class="bold-button" onclick="showOptions('q24')">[24]</button> wir noch keine 26 Jahre alt sind, können wir den Pass ausgesprochen günstig bekommen.</p>
+
+            <div class="options" id="options-q23">
+                <label><input type="radio" name="q23" value="fahren" onclick="selectOption('q23', 'fahren')"> A) fahren</label>
+                <label><input type="radio" name="q23" value="kommen" onclick="selectOption('q23', 'kommen')"> B) kommen</label>
+                <label><input type="radio" name="q23" value="nehmen" onclick="selectOption('q23', 'nehmen')"> C) nehmen</label>
+            </div>
+
+            <div class="options" id="options-q24">
+                <label><input type="radio" name="q24" value="da" onclick="selectOption('q24', 'da')"> A) da</label>
+                <label><input type="radio" name="q24" value="darum" onclick="selectOption('q24', 'darum')"> B) darum</label>
+                <label><input type="radio" name="q24" value="deshalb" onclick="selectOption('q24', 'deshalb')"> C) deshalb</label>
+            </div>
+
+            <p>Der Preis hängt <button class="bold-button" onclick="showOptions('q25')">[25]</button> ab, wie lange wir unterwegs sein wollen. Wenn du lieber nur ein einziges Land bereisen möchtest, schlage ich vor, nach Frankreich zu fahren. Dann nämlich würden wir für ein Interrail-Ticket sogar noch weniger zahlen.</p>
+
+            <div class="options" id="options-q25">
+                <label><input type="radio" name="q25" value="dadurch" onclick="selectOption('q25', 'dadurch')"> A) dadurch</label>
+                <label><input type="radio" name="q25" value="damit" onclick="selectOption('q25', 'damit')"> B) damit</label>
+                <label><input type="radio" name="q25" value="davon" onclick="selectOption('q25', 'davon')"> C) davon</label>
+            </div>
+
+            <p>Ich habe auch schon mit meiner Tante in Marseilles <button class="bold-button" onclick="showOptions('q26')">[26]</button> und sie hat gleich vorgeschlagen, <button class="bold-button" onclick="showOptions('q27')">[27]</button> wir einige Tage bei ihr verbringen. Meine Cousins Jérôme und Matthieu, die in Paris studieren, haben Semesterferien und werden auch dort sein. Die beiden würden <button class="bold-button" onclick="showOptions('q28')">[28]</button>, mit uns um die Häuser zu ziehen, und könnten uns sicherlich die angesagtesten Clubs der Stadt zeigen.</p>
+
+            <div class="options" id="options-q26">
+                <label><input type="radio" name="q26" value="besprochen" onclick="selectOption('q26', 'besprochen')"> A) besprochen</label>
+                <label><input type="radio" name="q26" value="gesprochen" onclick="selectOption('q26', 'gesprochen')"> B) gesprochen</label>
+                <label><input type="radio" name="q26" value="versprochen" onclick="selectOption('q26', 'versprochen')"> C) versprochen</label>
+            </div>
+
+            <div class="options" id="options-q27">
+                <label><input type="radio" name="q27" value="als" onclick="selectOption('q27', 'als')"> A) als</label>
+                <label><input type="radio" name="q27" value="dass" onclick="selectOption('q27', 'dass')"> B) dass</label>
+                <label><input type="radio" name="q27" value="wenn" onclick="selectOption('q27', 'wenn')"> C) wenn</label>
+            </div>
+
+            <div class="options" id="options-q28">
+                <label><input type="radio" name="q28" value="euch" onclick="selectOption('q28', 'euch')"> A) euch</label>
+                <label><input type="radio" name="q28" value="sich" onclick="selectOption('q28', 'sich')"> B) sich</label>
+                <label><input type="radio" name="q28" value="uns" onclick="selectOption('q28', 'uns')"> C) uns</label>
+            </div>
+
+            <p>Wegen <button class="bold-button" onclick="showOptions('q29')">[29]</button> Sprachkenntnisse brauchst du dir nicht den Kopf zu zerbrechen, denn die beiden sprechen ziemlich gut Deutsch.</p>
+
+            <div class="options" id="options-q29">
+                <label><input type="radio" name="q29" value="das" onclick="selectOption('q29', 'das')"> A) das</label>
+                <label><input type="radio" name="q29" value="der" onclick="selectOption('q29', 'der')"> B) der</label>
+                <label><input type="radio" name="q29" value="die" onclick="selectOption('q29', 'die')"> C) die</label>
+            </div>
+
+            <p>Ich freue mich <button class="bold-button" onclick="showOptions('q30')">[30]</button> sehr auf unsere gemeinsame Reise.</p>
+
+            <div class="options" id="options-q30">
+                <label><input type="radio" name="q30" value="bestenfalls" onclick="selectOption('q30', 'bestenfalls')"> A) bestenfalls</label>
+                <label><input type="radio" name="q30" value="jedenfalls" onclick="selectOption('q30', 'jedenfalls')"> B) jedenfalls</label>
+                <label><input type="radio" name="q30" value="keinesfalls" onclick="selectOption('q30', 'keinesfalls')"> C) keinesfalls</label>
+            </div>
+
+            <button onclick="checkAnswers()">Çöz</button>
+            <div class="result" id="result"></div>
+
+            <button onclick="window.location.href='cevapsiz3.html'" style="margin-top: 20px; padding: 10px 20px; font-size: 16px; color: white; background-color: #364b89; border: none; border-radius: 5px; cursor: pointer;">Sıradaki Alıştırma</button>
+        </div>
+        <footer>
+            © 2024 Ayda Language Academy - Alle Rechte vorbehalten
+        </footer>
+    </div>
+
+    <script>
+        const answers = {
+            q21: { answer: "über", explanation: "über, bir konu hakkında konuşmayı ifade eder." },
+            q22: { answer: "außerdem", explanation: "außerdem, ek bilgi vermek için kullanılır." },
+            q23: { answer: "fahren", explanation: "fahren, ulaşım aracıyla gitmek anlamındadır." },
+            q24: { answer: "da", explanation: "da, sebep-sonuç ilişkisi kurar ve çünkü anlamına gelir." },
+            q25: { answer: "davon", explanation: "davon, bir şeyden bahsederken kullanılır. 'Der Preis hängt davon ab' doğru ifadedir." },
+            q26: { answer: "gesprochen", explanation: "gesprochen, konuşmak anlamında kullanılır ve doğru fiildir." },
+            q27: { answer: "dass", explanation: "dass, bir yan cümle başlatır ve 'ki' anlamına gelir." },
+            q28: { answer: "sich", explanation: "sich freuen, refleksif bir fiildir ve 'sevinmek' anlamındadır." },
+            q29: { answer: "der", explanation: "der, 'Sprachkenntnisse' kelimesiyle uyumludur." },
+            q30: { answer: "jedenfalls", explanation: "jedenfalls, 'her durumda' anlamında doğru vurgu yapar." }
+        };
+
+        function showOptions(questionId) {
+            const allOptions = document.querySelectorAll('.options');
+            allOptions.forEach(option => {
+                option.style.display = 'none';
+            });
+
+            const options = document.getElementById(`options-${questionId}`);
+            if (options) {
+                options.style.display = 'block';
+            }
+        }
+
+        function selectOption(questionId, value) {
+            const button = document.querySelector(`button[onclick="showOptions('${questionId}')"]`);
+            if (button) {
+                button.innerText = value;
+                button.dataset.value = value;
+            }
+
+            const options = document.getElementById(`options-${questionId}`);
+            if (options) {
+                options.style.display = 'none';
+            }
+        }
+
+        function checkAnswers() {
+            let resultText = "";
+            let correctCount = 0;
+
+            for (let key in answers) {
+                const button = document.querySelector(`button[onclick="showOptions('${key}')"]`);
+                if (button) {
+                    const selectedValue = button.dataset.value;
+                    if (selectedValue === answers[key].answer) {
+                        correctCount++;
+                        resultText += `Soru ${key.slice(1)}: Doğru <br>`;
+                    } else {
+                        resultText += `Soru ${key.slice(1)}: Yanlış (Doğru cevap: ${answers[key].answer}, Açıklama: ${answers[key].explanation})<br>`;
+                    }
+                } else {
+                    resultText += `Soru ${key.slice(1)}: Yanıtlanmamış<br>`;
+                }
+            }
+
+            resultText += `<br>Doğru sayısı: ${correctCount} / ${Object.keys(answers).length}`;
+            document.getElementById("result").innerHTML = resultText;
+        }
+    </script>
+</body>
+</html>
